@@ -1,0 +1,27 @@
+main:
+	li a0, 10
+    li a1, 15
+    li a2, 6
+    li s0, 0
+    
+    li a3, 5
+    li a4, 7
+    
+    blt a0, a1, Z1
+    
+    bgt a0, a1, B
+    addi t0, a2, 1
+    beq t0, a4, B
+    
+    li s0, -3
+    j exit
+    
+    Z1: bgt a2, a3, A
+    A: li s0, -1
+    j exit
+    
+    B: li s0, -2
+    j exit
+    
+    exit:
+    
