@@ -8,7 +8,7 @@ main:
     li a4, 7
     
     blt a0, a1, Z1
-    
+    second: 
     bgt a0, a1, B
     addi t0, a2, 1
     beq t0, a4, B
@@ -17,6 +17,7 @@ main:
     j exit
     
     Z1: bgt a2, a3, A
+    ble a2, a3, second
     A: li s0, -1
     j exit
     
@@ -24,4 +25,4 @@ main:
     j exit
     
     exit:
-    
+        
