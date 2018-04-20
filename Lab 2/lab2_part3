@@ -1,0 +1,22 @@
+main:
+	li a0, 2
+	li a1, 0
+    li t0, 22
+    li t1, 100
+    li t2, 0
+    
+    C: beq a1, t0, A
+    addi a0, a0, 1
+    addi a1, a1, 2
+    j C
+    
+    A: beq a0, t1, B
+    addi a0, a0, 1
+    j A
+    
+    B: beq a1, t2, exit
+    addi a0, a0, -1
+    addi a1, a1, -1
+    j B
+    
+    exit: 
